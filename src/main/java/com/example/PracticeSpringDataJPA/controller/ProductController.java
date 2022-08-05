@@ -32,10 +32,13 @@ public class ProductController {
         return this.productServiceMySQL.update(product, productId);
     }
 
+
     @GetMapping("/delete/{productId}")
     public void deleteProduct(@PathVariable("productId") Integer productId){
         this.productServiceMySQL.delete(productId);
     }
+
+
 
     @CrossOrigin
     @PostMapping("/product")

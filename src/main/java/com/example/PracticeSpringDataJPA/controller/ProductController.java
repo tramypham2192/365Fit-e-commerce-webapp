@@ -27,7 +27,7 @@ public class ProductController {
         return this.productServiceMySQL.findById(productId);
     }
 
-    @GetMapping("/update/{productId}")
+    @PutMapping("/update/{productId}")
     public Product update(@RequestBody Product product, @PathVariable("productId") Integer productId){
         return this.productServiceMySQL.update(product, productId);
     }
